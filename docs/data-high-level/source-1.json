@@ -1,0 +1,1172 @@
+{
+    "id": "-eQz78jE2igUKhDbOwRcEoMG1fqOU0J",
+    "linkedinID": "chris-craft-461a6b6",
+    "fullName": "Chris Craft",
+    "headline": "Sr. Project Manager - SAP thru Kforce",
+    "locationIDList": [
+        102191575,
+        85633793,
+        102081935,
+        101724577,
+        85688753
+    ],
+    "gender": null,
+    "linkedinConnections": 13092,
+    "linkedinFollowers": 13283,
+    "linkedinLaborStatus": null,
+    "computed_likelyToExplore": false,
+    "computed_recentlyLeftCompany": false,
+    "computed_potentialToLeave": false,
+    "computed_priorBackedFounder": false,
+    "computed_unicornEarlyEngineer": false,
+    "computed_bigTechAlumPrivate": false,
+    "computed_bigTechAlumPublic": false,
+    "experienceList": [
+        {
+            "id": "11208445218",
+            "endDate": "2025-05-01T00:00:00.000Z",
+            "startDate": "2022-03-01T00:00:00.000Z",
+            "linkedinNumID": 1384,
+            "entityType": "company",
+            "positionList": [
+                {
+                    "title": "Sr. Project Manager - SAP at Boeing - HCLTech",
+                    "endDate": "2022-09-01T00:00:00.000Z",
+                    "location": "Renton, Washington USA",
+                    "startDate": "2022-03-01T00:00:00.000Z",
+                    "description": "HCL - Sr. Project Manager - SAP Boeing Aerospace and Defense.  Renton, Washington USA"
+                },
+                {
+                    "title": "SAP Cutover Manager - Boeing - HCLTech",
+                    "endDate": "2025-05-01T00:00:00.000Z",
+                    "location": "United States",
+                    "startDate": "2024-07-01T00:00:00.000Z",
+                    "description": "SAP Cutover Manager  HCL - Boeing Aerospace and Defense.  Austin, Texas USA"
+                }
+            ],
+            "companyName": "Boeing",
+            "companyID": "Ji3TbXTc6nNv3458-AD3s4bBZfwF6_6",
+            "description": null,
+            "company": {
+                "id": "Ji3TbXTc6nNv3458-AD3s4bBZfwF6_6",
+                "isStartup": null,
+                "financingStatus": "Corporation",
+                "linkedinID": "boeing",
+                "headcount": 121159,
+                "name": "Boeing",
+                "location": "Arlington, Virginia, United States",
+                "locationIDList": [
+                    102191575,
+                    85633793,
+                    102085953,
+                    101729469,
+                    85688747
+                ],
+                "locality": "Arlington",
+                "country": "United States",
+                "region": "Virginia",
+                "status": "active",
+                "ownershipStatus": "Publicly Held",
+                "industryList": [],
+                "computed_tags": [
+                    "Government",
+                    "Security",
+                    "Legal",
+                    "Defense",
+                    "Aviation and Space",
+                    "Industrials",
+                    "B2B"
+                ],
+                "founded": "1916-01-01T00:00:00.000Z",
+                "yearlyHeadcountChange": 961,
+                "monthlyHeadcountChange": 0,
+                "triMonthlyHeadcountChange": -218
+            }
+        },
+        {
+            "id": "11208445219",
+            "endDate": "2025-04-01T00:00:00.000Z",
+            "startDate": "2022-03-01T00:00:00.000Z",
+            "linkedinNumID": 1756,
+            "entityType": "company",
+            "positionList": [
+                {
+                    "title": "Sr. Project Manager - SAP at HCLTech",
+                    "endDate": "2025-04-01T00:00:00.000Z",
+                    "location": "Houston, Texas, United States",
+                    "startDate": "2022-03-01T00:00:00.000Z",
+                    "description": "HCL - Sr. Project Manager - SAP - Houston, Texas USA"
+                }
+            ],
+            "companyName": "HCLTech",
+            "companyID": "gGu5XTiitYgG5P2dUKbWynHcWUhDrl8",
+            "description": null,
+            "company": {
+                "id": "gGu5XTiitYgG5P2dUKbWynHcWUhDrl8",
+                "isStartup": null,
+                "financingStatus": "Corporation",
+                "linkedinID": "hcl-technologies",
+                "headcount": 244694,
+                "name": "HCLTech",
+                "location": "Noida, Uttar Pradesh, India",
+                "locationIDList": [
+                    102191569,
+                    85632469,
+                    890508371,
+                    102031133,
+                    85672205
+                ],
+                "locality": "Noida",
+                "country": "India",
+                "region": "Uttar Pradesh",
+                "status": "active",
+                "ownershipStatus": "Publicly Held",
+                "industryList": [
+                    "Information and Communications Technology (ICT)",
+                    "IT Management",
+                    "Outsourcing",
+                    "Software",
+                    "Telecommunications"
+                ],
+                "computed_tags": [
+                    "B2B",
+                    "Retail",
+                    "Finance",
+                    "Healthcare Internal IT",
+                    "Financial Operations and Accounting",
+                    "Manufacturing",
+                    "Infrastructure"
+                ],
+                "founded": "1976-01-01T00:00:00.000Z",
+                "yearlyHeadcountChange": -20678,
+                "monthlyHeadcountChange": -88,
+                "triMonthlyHeadcountChange": -3535
+            }
+        },
+        {
+            "id": "11208445200",
+            "endDate": "2005-12-01T00:00:00.000Z",
+            "startDate": "2005-01-01T00:00:00.000Z",
+            "linkedinNumID": 11169,
+            "entityType": "company",
+            "positionList": [
+                {
+                    "title": "IT SOX Auditor - El Paso Corporation",
+                    "endDate": "2005-12-01T00:00:00.000Z",
+                    "location": "Houston, Texas, United States",
+                    "startDate": "2005-01-01T00:00:00.000Z",
+                    "department": "FINANCE",
+                    "description": null
+                }
+            ],
+            "companyName": "Kinder Morgan, Inc.",
+            "companyID": "lqQRpejGWsQ3u8fwAmbQlXoqhh-ZNqx",
+            "description": null,
+            "company": {
+                "id": "lqQRpejGWsQ3u8fwAmbQlXoqhh-ZNqx",
+                "isStartup": null,
+                "financingStatus": "Formerly PE-Backed",
+                "linkedinID": "kinder-morgan",
+                "headcount": 8947,
+                "name": "Kinder Morgan, Inc.",
+                "location": "Houston, Texas, United States",
+                "locationIDList": [
+                    102191575,
+                    85633793,
+                    102081111,
+                    101725629,
+                    85688753
+                ],
+                "locality": "Houston",
+                "country": "United States",
+                "region": "Texas",
+                "status": "active",
+                "ownershipStatus": "Publicly Held",
+                "industryList": [
+                    "Energy",
+                    "Logistics",
+                    "Oil and Gas"
+                ],
+                "computed_tags": [],
+                "founded": "1997-01-01T00:00:00.000Z",
+                "yearlyHeadcountChange": 29,
+                "monthlyHeadcountChange": -11,
+                "triMonthlyHeadcountChange": -34
+            }
+        },
+        {
+            "id": "11208445201",
+            "endDate": "2006-08-01T00:00:00.000Z",
+            "startDate": "2005-12-01T00:00:00.000Z",
+            "linkedinNumID": 1271,
+            "entityType": "company",
+            "positionList": [
+                {
+                    "title": "IT Project Manager",
+                    "endDate": "2006-08-01T00:00:00.000Z",
+                    "location": "Houston, Texas, United States",
+                    "startDate": "2005-12-01T00:00:00.000Z",
+                    "description": null,
+                    "seniorityScore": 3
+                }
+            ],
+            "companyName": "Shell",
+            "companyID": "SQnzBMy6P6R8SekeI3eUjLYVrWW4WMB",
+            "description": null,
+            "company": {
+                "id": "SQnzBMy6P6R8SekeI3eUjLYVrWW4WMB",
+                "isStartup": null,
+                "financingStatus": null,
+                "linkedinID": "shell",
+                "headcount": 166682,
+                "name": "Shell",
+                "location": "London, Greater London, United Kingdom",
+                "locationIDList": [
+                    102191581,
+                    85633159,
+                    101750367,
+                    404227469,
+                    1360698645
+                ],
+                "locality": "London",
+                "country": "United Kingdom",
+                "region": "Greater London",
+                "status": "active",
+                "ownershipStatus": null,
+                "industryList": [
+                    "Energy",
+                    "Oil and Gas",
+                    "Renewable Energy"
+                ],
+                "computed_tags": [
+                    "Industrials",
+                    "B2B",
+                    "Marketing",
+                    "Climate",
+                    "Manufacturing",
+                    "Energy",
+                    "Compliance"
+                ],
+                "founded": "1907-04-01T00:00:00.000Z",
+                "yearlyHeadcountChange": 0,
+                "monthlyHeadcountChange": 0,
+                "triMonthlyHeadcountChange": 0
+            }
+        },
+        {
+            "id": "11208445202",
+            "endDate": "2010-04-01T00:00:00.000Z",
+            "startDate": "2009-04-01T00:00:00.000Z",
+            "linkedinNumID": 166897,
+            "entityType": "company",
+            "positionList": [
+                {
+                    "title": "IT Project Manager",
+                    "endDate": "2010-04-01T00:00:00.000Z",
+                    "location": null,
+                    "startDate": "2009-04-01T00:00:00.000Z",
+                    "description": null,
+                    "seniorityScore": 3
+                }
+            ],
+            "companyName": "Weatherford",
+            "companyID": "h3GDWiVFOLR0zM8N8NHhZrjxDJzw97Z",
+            "description": null,
+            "company": {
+                "id": "h3GDWiVFOLR0zM8N8NHhZrjxDJzw97Z",
+                "isStartup": null,
+                "financingStatus": null,
+                "linkedinID": "weatherford",
+                "headcount": 29408,
+                "name": "Weatherford",
+                "location": "Baar, Zug, Switzerland",
+                "locationIDList": [
+                    102191581,
+                    85633051,
+                    102063067,
+                    404328235,
+                    101875981,
+                    85682263
+                ],
+                "locality": "Baar",
+                "country": "Switzerland",
+                "region": "Zug",
+                "status": "active",
+                "ownershipStatus": null,
+                "industryList": [
+                    "Energy",
+                    "Industrial",
+                    "Oil and Gas"
+                ],
+                "computed_tags": [
+                    "B2B",
+                    "Industrials",
+                    "Energy",
+                    "Corporate Training",
+                    "Research Labs",
+                    "Manufacturing"
+                ],
+                "founded": "1941-01-01T00:00:00.000Z",
+                "yearlyHeadcountChange": -683,
+                "monthlyHeadcountChange": 0,
+                "triMonthlyHeadcountChange": -69
+            }
+        },
+        {
+            "id": "11208445203",
+            "endDate": "2012-07-01T00:00:00.000Z",
+            "startDate": "2011-01-01T00:00:00.000Z",
+            "linkedinNumID": 2347,
+            "entityType": "company",
+            "positionList": [
+                {
+                    "title": "SAP Basis Infrastructure Project Manager - Shell Oil/Chevron/Horizon Wind Power",
+                    "endDate": "2012-07-01T00:00:00.000Z",
+                    "location": null,
+                    "startDate": "2011-01-01T00:00:00.000Z",
+                    "description": null
+                }
+            ],
+            "companyName": "Logica",
+            "companyID": "PJX7Z9N4gsKtbEYK4gffqtdTGX372vk",
+            "description": null,
+            "company": {
+                "id": "PJX7Z9N4gsKtbEYK4gffqtdTGX372vk",
+                "isStartup": null,
+                "financingStatus": "Corporate Backed or Acquired",
+                "linkedinID": "logica",
+                "headcount": 9357,
+                "name": "Logica",
+                "location": "Reading, Berkshire, United Kingdom",
+                "locationIDList": [
+                    102191581,
+                    85633159,
+                    1360698983,
+                    1175612721,
+                    404227469,
+                    1360698529
+                ],
+                "locality": "Reading",
+                "country": "United Kingdom",
+                "region": "Berkshire",
+                "status": "closed",
+                "ownershipStatus": "Acquired/Merged",
+                "industryList": [
+                    "Consulting",
+                    "Information Technology",
+                    "Service Industry"
+                ],
+                "computed_tags": [],
+                "founded": "1969-01-01T00:00:00.000Z",
+                "yearlyHeadcountChange": -91,
+                "monthlyHeadcountChange": 0,
+                "triMonthlyHeadcountChange": 0
+            }
+        },
+        {
+            "id": "11208445204",
+            "endDate": "2013-07-01T00:00:00.000Z",
+            "startDate": "2012-08-01T00:00:00.000Z",
+            "linkedinNumID": 163853,
+            "entityType": "company",
+            "positionList": [
+                {
+                    "title": "IT Project Manager - ExxonMobil Program",
+                    "endDate": "2013-07-01T00:00:00.000Z",
+                    "location": null,
+                    "startDate": "2012-08-01T00:00:00.000Z",
+                    "description": null
+                }
+            ],
+            "companyName": "FMC Technologies",
+            "companyID": "2s14LXvMzYCBARX7G00_MSMnrvYbGnw",
+            "description": null,
+            "company": {
+                "id": "2s14LXvMzYCBARX7G00_MSMnrvYbGnw",
+                "isStartup": null,
+                "financingStatus": "Corporate Backed or Acquired",
+                "linkedinID": "fmc-technologies",
+                "headcount": 4865,
+                "name": "FMC Technologies",
+                "location": "Houston, Texas, United States",
+                "locationIDList": [
+                    102191575,
+                    85633793,
+                    102081111,
+                    101725629,
+                    85688753
+                ],
+                "locality": "Houston",
+                "country": "United States",
+                "region": "Texas",
+                "status": "closed",
+                "ownershipStatus": "Acquired/Merged",
+                "industryList": [
+                    "Chemical",
+                    "Energy",
+                    "Information Technology",
+                    "Oil and Gas"
+                ],
+                "computed_tags": [],
+                "founded": "1884-01-01T00:00:00.000Z",
+                "yearlyHeadcountChange": -31,
+                "monthlyHeadcountChange": -1,
+                "triMonthlyHeadcountChange": -6
+            }
+        },
+        {
+            "id": "11208445209",
+            "endDate": "2014-01-01T00:00:00.000Z",
+            "startDate": "2013-12-01T00:00:00.000Z",
+            "linkedinNumID": 2217,
+            "entityType": "company",
+            "positionList": [
+                {
+                    "title": "IT Project Manager",
+                    "endDate": "2014-01-01T00:00:00.000Z",
+                    "location": null,
+                    "startDate": "2013-12-01T00:00:00.000Z",
+                    "description": null,
+                    "seniorityScore": 3
+                }
+            ],
+            "companyName": "Halliburton",
+            "companyID": "b3moOS1hT7XJFIhor_x9207cj9jiJVt",
+            "description": null,
+            "company": {
+                "id": "b3moOS1hT7XJFIhor_x9207cj9jiJVt",
+                "isStartup": null,
+                "financingStatus": null,
+                "linkedinID": "halliburton",
+                "headcount": 58809,
+                "name": "Halliburton",
+                "location": "Houston, Texas, United States",
+                "locationIDList": [
+                    102191575,
+                    85633793,
+                    102081111,
+                    101725629,
+                    85688753
+                ],
+                "locality": "Houston",
+                "country": "United States",
+                "region": "Texas",
+                "status": "active",
+                "ownershipStatus": null,
+                "industryList": [
+                    "Energy",
+                    "Natural Resources",
+                    "Oil and Gas",
+                    "Renewable Energy"
+                ],
+                "computed_tags": [],
+                "founded": "1919-01-01T00:00:00.000Z",
+                "yearlyHeadcountChange": -3679,
+                "monthlyHeadcountChange": -526,
+                "triMonthlyHeadcountChange": -876
+            }
+        },
+        {
+            "id": "11208445213",
+            "endDate": "2014-11-01T00:00:00.000Z",
+            "startDate": "2014-02-01T00:00:00.000Z",
+            "linkedinNumID": 2576548,
+            "entityType": "company",
+            "positionList": [
+                {
+                    "title": "IT Project Manager",
+                    "endDate": "2014-11-01T00:00:00.000Z",
+                    "location": null,
+                    "startDate": "2014-02-01T00:00:00.000Z",
+                    "description": null,
+                    "seniorityScore": 3
+                }
+            ],
+            "companyName": "Phillips 66",
+            "companyID": "MxgMi9cqHLqcgO8I4cwQhjoJsaxhNzP",
+            "description": null,
+            "company": {
+                "id": "MxgMi9cqHLqcgO8I4cwQhjoJsaxhNzP",
+                "isStartup": null,
+                "financingStatus": "Corporation",
+                "linkedinID": "phillips66co",
+                "headcount": 15000,
+                "name": "Phillips 66",
+                "location": "Houston, Texas, United States",
+                "locationIDList": [
+                    102191575,
+                    85633793,
+                    102081111,
+                    101725629,
+                    85688753
+                ],
+                "locality": "Houston",
+                "country": "United States",
+                "region": "Texas",
+                "status": "active",
+                "ownershipStatus": "Publicly Held",
+                "industryList": [
+                    "Energy",
+                    "Logistics",
+                    "Manufacturing"
+                ],
+                "computed_tags": [],
+                "founded": "1874-01-01T00:00:00.000Z",
+                "yearlyHeadcountChange": -109,
+                "monthlyHeadcountChange": -9,
+                "triMonthlyHeadcountChange": -85
+            }
+        },
+        {
+            "id": "11208445214",
+            "endDate": "2020-11-01T00:00:00.000Z",
+            "startDate": "2015-01-01T00:00:00.000Z",
+            "linkedinNumID": 26038,
+            "entityType": "company",
+            "positionList": [
+                {
+                    "title": "SR. IT Manager",
+                    "endDate": "2020-11-01T00:00:00.000Z",
+                    "location": null,
+                    "startDate": "2015-01-01T00:00:00.000Z",
+                    "description": null
+                }
+            ],
+            "companyName": "Mitsubishi Heavy Industries",
+            "companyID": "UPYHbYo-mQAYAIvWfRNWcGKCrqDzsks",
+            "description": null,
+            "company": {
+                "id": "UPYHbYo-mQAYAIvWfRNWcGKCrqDzsks",
+                "isStartup": null,
+                "financingStatus": "Corporation",
+                "linkedinID": "mitsubishi-heavy-industries",
+                "headcount": 15415,
+                "name": "Mitsubishi Heavy Industries",
+                "location": "Tokyo, Tokyo, Japan",
+                "locationIDList": [
+                    102191569,
+                    85632429,
+                    1108741679,
+                    102031307,
+                    85672817
+                ],
+                "locality": "Tokyo",
+                "country": "Japan",
+                "region": "Tokyo",
+                "status": "active",
+                "ownershipStatus": "Publicly Held",
+                "industryList": [
+                    "Electronics",
+                    "Industrial",
+                    "Machinery Manufacturing",
+                    "Manufacturing"
+                ],
+                "computed_tags": [],
+                "founded": "1884-01-01T00:00:00.000Z",
+                "yearlyHeadcountChange": -46,
+                "monthlyHeadcountChange": -8,
+                "triMonthlyHeadcountChange": -17
+            }
+        },
+        {
+            "id": "11208445221",
+            "endDate": null,
+            "startDate": "2025-07-01T00:00:00.000Z",
+            "linkedinNumID": 19156,
+            "entityType": "company",
+            "positionList": [
+                {
+                    "title": "Sr. Project Manager - SAP - Kforce",
+                    "endDate": null,
+                    "location": "San Antonio, Texas Metropolitan Area",
+                    "startDate": "2025-07-01T00:00:00.000Z",
+                    "description": "Sr. Project Manager - Kforce"
+                }
+            ],
+            "companyName": "City of San Antonio",
+            "companyID": "lPwps69phjKaBPCxiNdp7pvb4UwpHVu",
+            "description": null,
+            "company": {
+                "id": "lPwps69phjKaBPCxiNdp7pvb4UwpHVu",
+                "isStartup": null,
+                "financingStatus": null,
+                "linkedinID": "city-of-san-antonio",
+                "headcount": 5831,
+                "name": "City of San Antonio",
+                "location": "United States",
+                "locationIDList": [
+                    102191575,
+                    85633793,
+                    136253057
+                ],
+                "locality": null,
+                "country": "United States",
+                "region": null,
+                "status": "active",
+                "ownershipStatus": null,
+                "industryList": [
+                    "Association"
+                ],
+                "computed_tags": [
+                    "Defense",
+                    "Health",
+                    "Security",
+                    "B2B",
+                    "Government",
+                    "Infrastructure",
+                    "Healthcare Internal IT"
+                ],
+                "founded": "1981-01-01T00:00:00.000Z",
+                "yearlyHeadcountChange": -72,
+                "monthlyHeadcountChange": -9,
+                "triMonthlyHeadcountChange": -33
+            }
+        },
+        {
+            "id": "10678071867",
+            "endDate": "2008-01-01T00:00:00.000Z",
+            "startDate": "2007-01-01T00:00:00.000Z",
+            "linkedinNumID": 166327,
+            "entityType": "company",
+            "positionList": [
+                {
+                    "title": "IT SOX Auditor",
+                    "endDate": "2008-01-01T00:00:00.000Z",
+                    "location": "Houston, Texas, United States",
+                    "startDate": "2007-01-01T00:00:00.000Z",
+                    "department": "FINANCE",
+                    "description": null,
+                    "seniorityScore": 3
+                }
+            ],
+            "companyName": "Tenaris",
+            "companyID": "miu6sQ5WU7z1Jv0wgDVvpHIvglXl0eE",
+            "description": null,
+            "company": {
+                "id": "miu6sQ5WU7z1Jv0wgDVvpHIvglXl0eE",
+                "isStartup": null,
+                "financingStatus": "Corporation",
+                "linkedinID": "tenaris",
+                "headcount": 13877,
+                "name": "Tenaris",
+                "location": "Luxembourg, Luxembourg, Luxembourg",
+                "locationIDList": [
+                    102191581,
+                    85633275,
+                    1125286201,
+                    101751765,
+                    1745977427
+                ],
+                "locality": "Luxembourg",
+                "country": "Luxembourg",
+                "region": "Luxembourg",
+                "status": "active",
+                "ownershipStatus": "Publicly Held",
+                "industryList": [
+                    "Energy",
+                    "Manufacturing"
+                ],
+                "computed_tags": [],
+                "founded": "2001-01-01T00:00:00.000Z",
+                "yearlyHeadcountChange": -305,
+                "monthlyHeadcountChange": -19,
+                "triMonthlyHeadcountChange": -89
+            }
+        },
+        {
+            "id": "10678071872",
+            "endDate": "2023-10-01T00:00:00.000Z",
+            "startDate": "2022-09-01T00:00:00.000Z",
+            "linkedinNumID": 163993,
+            "entityType": "company",
+            "positionList": [
+                {
+                    "title": "Sr. Project Manager - SAP at Gilead - HCLTech",
+                    "endDate": "2023-10-01T00:00:00.000Z",
+                    "location": "Foster City, California, United States",
+                    "startDate": "2022-09-01T00:00:00.000Z",
+                    "description": "HCL - Sr. Project Manager - SAP at Gilead - Foster City, California USA"
+                }
+            ],
+            "companyName": "Gilead Sciences",
+            "companyID": "2N_XRV6Flc3DQOk6C5X22DmT_E58CNk",
+            "description": null,
+            "company": {
+                "id": "2N_XRV6Flc3DQOk6C5X22DmT_E58CNk",
+                "isStartup": null,
+                "financingStatus": "Formerly VC-backed",
+                "linkedinID": "gilead-sciences",
+                "headcount": 14488,
+                "name": "Gilead Sciences",
+                "location": "Foster City, California, United States",
+                "locationIDList": [
+                    102191575,
+                    85633793,
+                    102085387,
+                    1276909861,
+                    85688637
+                ],
+                "locality": "Foster City",
+                "country": "United States",
+                "region": "California",
+                "status": "active",
+                "ownershipStatus": "Publicly Held",
+                "industryList": [
+                    "Biopharma",
+                    "Biotechnology",
+                    "Health Care",
+                    "Manufacturing",
+                    "Pharmaceutical"
+                ],
+                "computed_tags": [
+                    "Medical Research",
+                    "B2B",
+                    "Therapeutics",
+                    "Drug Discovery and Delivery",
+                    "Health"
+                ],
+                "founded": "1987-01-01T00:00:00.000Z",
+                "yearlyHeadcountChange": -699,
+                "monthlyHeadcountChange": 0,
+                "triMonthlyHeadcountChange": -195
+            }
+        },
+        {
+            "id": "10678071875",
+            "endDate": "2013-11-01T00:00:00.000Z",
+            "startDate": "2013-08-01T00:00:00.000Z",
+            "linkedinNumID": 3895,
+            "entityType": "company",
+            "positionList": [
+                {
+                    "title": "SAP Project Manager",
+                    "endDate": "2013-11-01T00:00:00.000Z",
+                    "location": "San Ramon, CA",
+                    "startDate": "2013-08-01T00:00:00.000Z",
+                    "description": null,
+                    "seniorityScore": 3
+                }
+            ],
+            "companyName": "Pacific Gas and Electric Company",
+            "companyID": "iomIrVYIg6QBIdqtxsnRe9DzB9U_cOL",
+            "description": null,
+            "company": {
+                "id": "iomIrVYIg6QBIdqtxsnRe9DzB9U_cOL",
+                "isStartup": null,
+                "financingStatus": "Corporation",
+                "linkedinID": "pacific-gas-and-electric-company",
+                "headcount": 22072,
+                "name": "Pacific Gas and Electric Company",
+                "location": "San Francisco, California, United States",
+                "locationIDList": [
+                    102191575,
+                    85633793,
+                    102087579,
+                    85922583,
+                    85688637
+                ],
+                "locality": "San Francisco",
+                "country": "United States",
+                "region": "California",
+                "status": "active",
+                "ownershipStatus": "Publicly Held",
+                "industryList": [
+                    "Energy",
+                    "Telecommunications"
+                ],
+                "computed_tags": [
+                    "Supply Chain and Logistics",
+                    "B2B",
+                    "Industrials",
+                    "Energy",
+                    "Consumer"
+                ],
+                "founded": "1905-01-01T00:00:00.000Z",
+                "yearlyHeadcountChange": 460,
+                "monthlyHeadcountChange": -21,
+                "triMonthlyHeadcountChange": 14
+            }
+        },
+        {
+            "id": "10678071878",
+            "endDate": "2010-12-01T00:00:00.000Z",
+            "startDate": "2010-05-01T00:00:00.000Z",
+            "linkedinNumID": 4334,
+            "entityType": "company",
+            "positionList": [
+                {
+                    "title": "IT Project Manager",
+                    "endDate": "2010-12-01T00:00:00.000Z",
+                    "location": "The Woodlands, Texas, United States",
+                    "startDate": "2010-05-01T00:00:00.000Z",
+                    "description": null,
+                    "seniorityScore": 3
+                }
+            ],
+            "companyName": "Baker Hughes",
+            "companyID": "UqS3jISA0XiUJZd9abaTN3h0UPBqsYE",
+            "description": null,
+            "company": {
+                "id": "UqS3jISA0XiUJZd9abaTN3h0UPBqsYE",
+                "isStartup": null,
+                "financingStatus": null,
+                "linkedinID": "bakerhughes",
+                "headcount": 66435,
+                "name": "Baker Hughes",
+                "location": "Houston, Texas, United States",
+                "locationIDList": [
+                    102191575,
+                    85633793,
+                    102081111,
+                    101725629,
+                    85688753
+                ],
+                "locality": "Houston",
+                "country": "United States",
+                "region": "Texas",
+                "status": "active",
+                "ownershipStatus": null,
+                "industryList": [
+                    "Clean Energy",
+                    "Energy",
+                    "Industrial",
+                    "Information Technology",
+                    "Oil and Gas"
+                ],
+                "computed_tags": [
+                    "Industrials",
+                    "Energy"
+                ],
+                "founded": "1987-04-03T00:00:00.000Z",
+                "yearlyHeadcountChange": -5043,
+                "monthlyHeadcountChange": -5,
+                "triMonthlyHeadcountChange": -349
+            }
+        },
+        {
+            "id": "10678071880",
+            "endDate": "2007-01-01T00:00:00.000Z",
+            "startDate": "2006-08-01T00:00:00.000Z",
+            "linkedinNumID": 5649,
+            "entityType": "company",
+            "positionList": [
+                {
+                    "title": "IT SOX Auditor",
+                    "endDate": "2007-01-01T00:00:00.000Z",
+                    "location": "The Woodlands, Texas, United States",
+                    "startDate": "2006-08-01T00:00:00.000Z",
+                    "department": "FINANCE",
+                    "description": null,
+                    "seniorityScore": 3
+                }
+            ],
+            "companyName": "Huntsman Corporation",
+            "companyID": "OcB9BZbJrMvqAAvrfqaRvOvpuBeLce0",
+            "description": null,
+            "company": {
+                "id": "OcB9BZbJrMvqAAvrfqaRvOvpuBeLce0",
+                "isStartup": null,
+                "financingStatus": "Formerly PE-Backed",
+                "linkedinID": "huntsman",
+                "headcount": 6980,
+                "name": "Huntsman Corporation",
+                "location": "Texas, United States",
+                "locationIDList": [
+                    102191575,
+                    85633793,
+                    85688753
+                ],
+                "locality": null,
+                "country": "United States",
+                "region": "Texas",
+                "status": "active",
+                "ownershipStatus": "Publicly Held",
+                "industryList": [
+                    "Agriculture",
+                    "Automotive",
+                    "Chemical",
+                    "Chemical Engineering",
+                    "Construction",
+                    "Manufacturing"
+                ],
+                "computed_tags": [
+                    "Industrials",
+                    "Energy",
+                    "Manufacturing",
+                    "Climate",
+                    "B2B"
+                ],
+                "founded": null,
+                "yearlyHeadcountChange": -98,
+                "monthlyHeadcountChange": -17,
+                "triMonthlyHeadcountChange": -58
+            }
+        },
+        {
+            "id": "10678071886",
+            "endDate": "2015-01-01T00:00:00.000Z",
+            "startDate": "2014-02-01T00:00:00.000Z",
+            "linkedinNumID": 2767,
+            "entityType": "company",
+            "positionList": [
+                {
+                    "title": "IT Project Manager",
+                    "endDate": "2015-01-01T00:00:00.000Z",
+                    "location": "Houston, Texas Area",
+                    "startDate": "2014-02-01T00:00:00.000Z",
+                    "description": null,
+                    "seniorityScore": 3
+                }
+            ],
+            "companyName": "Direct Energy",
+            "companyID": "LX0c9pFar78fnC1XX8LPn9DnzF-SfUE",
+            "description": null,
+            "company": {
+                "id": "LX0c9pFar78fnC1XX8LPn9DnzF-SfUE",
+                "isStartup": null,
+                "financingStatus": "Formerly PE-Backed",
+                "linkedinID": "direct-energy",
+                "headcount": 2132,
+                "name": "Direct Energy",
+                "location": "Pittsburgh, Pennsylvania, United States",
+                "locationIDList": [
+                    102191575,
+                    85633793,
+                    102080887,
+                    404482523,
+                    101718805,
+                    85688481
+                ],
+                "locality": "Pittsburgh",
+                "country": "United States",
+                "region": "Pennsylvania",
+                "status": "active",
+                "ownershipStatus": "Acquired/Merged (Operating Subsidiary)",
+                "industryList": [
+                    "Electrical Distribution",
+                    "Energy",
+                    "Energy Efficiency",
+                    "Residential",
+                    "Retail"
+                ],
+                "computed_tags": [],
+                "founded": "1986-01-01T00:00:00.000Z",
+                "yearlyHeadcountChange": -21,
+                "monthlyHeadcountChange": -1,
+                "triMonthlyHeadcountChange": -3
+            }
+        },
+        {
+            "id": "10678071891",
+            "endDate": "2022-03-01T00:00:00.000Z",
+            "startDate": "2021-07-01T00:00:00.000Z",
+            "linkedinNumID": 3678,
+            "entityType": "company",
+            "positionList": [
+                {
+                    "title": "Project Manager - SAP",
+                    "endDate": "2022-03-01T00:00:00.000Z",
+                    "location": "Corning, New York, United States",
+                    "startDate": "2021-07-01T00:00:00.000Z",
+                    "description": "Corning, New York USA"
+                }
+            ],
+            "companyName": "Corning Incorporated",
+            "companyID": "qBf1qrQAwoyiBGjVzcOCX2LDDFg588Z",
+            "description": null,
+            "company": {
+                "id": "qBf1qrQAwoyiBGjVzcOCX2LDDFg588Z",
+                "isStartup": null,
+                "financingStatus": null,
+                "linkedinID": "corning-incorporated",
+                "headcount": 20682,
+                "name": "Corning Incorporated",
+                "location": "Corning, New York, United States",
+                "locationIDList": [
+                    102191575,
+                    85633793,
+                    102083115,
+                    404522599,
+                    85978645,
+                    85688543
+                ],
+                "locality": "Corning",
+                "country": "United States",
+                "region": "New York",
+                "status": "active",
+                "ownershipStatus": null,
+                "industryList": [
+                    "Building Material",
+                    "Electronics",
+                    "Hardware",
+                    "Life Science",
+                    "Manufacturing",
+                    "Telecommunications"
+                ],
+                "computed_tags": [
+                    "B2B",
+                    "Manufacturing",
+                    "Consumer Electronics",
+                    "Automotive",
+                    "Industrials"
+                ],
+                "founded": "1851-01-01T00:00:00.000Z",
+                "yearlyHeadcountChange": 266,
+                "monthlyHeadcountChange": -10,
+                "triMonthlyHeadcountChange": 3
+            }
+        },
+        {
+            "id": "11245414198",
+            "endDate": "2008-10-01T00:00:00.000Z",
+            "startDate": "2008-02-01T00:00:00.000Z",
+            "linkedinNumID": 1021,
+            "entityType": "company",
+            "positionList": [
+                {
+                    "title": "IT Manager",
+                    "endDate": "2008-10-01T00:00:00.000Z",
+                    "location": "Houston, Texas Area",
+                    "startDate": "2008-02-01T00:00:00.000Z",
+                    "description": null
+                }
+            ],
+            "companyName": "GE Power",
+            "companyID": "e4512Bmi8Wjz8G0s-X66R-D5Ore_d90",
+            "description": null,
+            "company": {
+                "id": "e4512Bmi8Wjz8G0s-X66R-D5Ore_d90",
+                "isStartup": null,
+                "financingStatus": "Formerly PE-Backed",
+                "linkedinID": "gepowerconversion",
+                "headcount": 19423,
+                "name": "GE Power",
+                "location": "Berlin, Berlin, Germany",
+                "locationIDList": [
+                    102191581,
+                    85633111,
+                    1377694153,
+                    101909779,
+                    85682499
+                ],
+                "locality": "Berlin",
+                "country": "Germany",
+                "region": "Berlin",
+                "status": "active",
+                "ownershipStatus": "Acquired/Merged",
+                "industryList": [
+                    "Energy",
+                    "Internet",
+                    "Manufacturing",
+                    "Software Engineering"
+                ],
+                "computed_tags": [],
+                "founded": "2005-01-01T00:00:00.000Z",
+                "yearlyHeadcountChange": -176,
+                "monthlyHeadcountChange": 0,
+                "triMonthlyHeadcountChange": -17
+            }
+        }
+    ],
+    "educationList": [],
+    "degreeList": [],
+    "languageList": [
+        {
+            "id": "338214379",
+            "proficiency": null,
+            "languageName": "Spanish"
+        }
+    ],
+    "companiesFoundedList": [],
+    "imageURL": "https://images.aviato.co/entity-images/person?id=-eQz78jE2igUKhDbOwRcEoMG1fqOU0J",
+    "locationDetails": {
+        "continent": {
+            "id": 102191575,
+            "name": "North America",
+            "placeType": "continent",
+            "geometry": {
+                "area_square_degrees": 3704.177719468138,
+                "area_square_m": 24179941572308.465,
+                "bbox": "-179.143503,5.515082,179.780935,83.634101",
+                "lat": 56.49869848953128,
+                "lon": -92.33558714910542
+            }
+        },
+        "country": {
+            "id": 85633793,
+            "name": "United States",
+            "placeType": "country",
+            "geometry": {
+                "area_square_degrees": 1166.190125,
+                "area_square_m": 9816715528449.193,
+                "bbox": "-179.231086,18.86546,179.859681,71.441059",
+                "lat": 45.964469,
+                "lon": -113.26858
+            }
+        },
+        "county": {
+            "id": 102081935,
+            "name": "Travis",
+            "placeType": "county",
+            "geometry": {
+                "area_square_degrees": 0.24855,
+                "area_square_m": 2652589871.027141,
+                "bbox": "-98.172977,30.024499,-97.369539,30.628249",
+                "lat": 30.33469,
+                "lon": -97.781953
+            }
+        },
+        "locality": {
+            "id": 101724577,
+            "name": "Austin",
+            "placeType": "locality",
+            "geometry": {
+                "area_square_degrees": 0.074097,
+                "area_square_m": 791012070.056226,
+                "bbox": "-97.938383,30.098659,-97.561489,30.516863",
+                "lat": 30.306845,
+                "lon": -97.755469
+            }
+        },
+        "region": {
+            "id": 85688753,
+            "name": "Texas",
+            "placeType": "region",
+            "geometry": {
+                "area_square_degrees": 66.054312,
+                "area_square_m": 696290118990.0682,
+                "bbox": "-106.645646,25.837164,-93.508039,36.500704",
+                "lat": 31.447215,
+                "lon": -99.317137
+            }
+        }
+    },
+    "about": "I am a results-driven Senior IT Project Manager with a strong background in software and infrastructure projects.  My diverse experience and proven track record are supported by my problem-solving skills, integrity, and enthusiasm in completing projects on-time and within budget.  Through my many years of work, I have learned that my ability to understand the big picture, tackle problems with confidence, and effectively communicate between upper management and project team members has enhanced my successes.  A review of some of my various projects is included in the Accomplishments section below.",
+    "skills": [
+        "Project Management",
+        "Microsoft Excel",
+        "Microsoft Office",
+        "SAP",
+        "Oracle SQL",
+        "SQL",
+        "JDeveloper",
+        "Microsoft Word",
+        "Microsoft Technologies",
+        "Microsoft Exchange",
+        "MS Project",
+        "Oracle",
+        "Management",
+        "Recruiting",
+        "SharePoint",
+        "Process Improvement",
+        "CRM",
+        "Business Process Improvement",
+        "Quality Assurance",
+        "Access"
+    ],
+    "firstName": "Chris",
+    "lastName": "Craft",
+    "location": "Austin, Texas, United States",
+    "lastUpdated": "2025-10-24T05:37:55.731Z",
+    "linkedinEntityID": "ACoAAAE5iskBN9YLGyU4preoWOcDbXvwCa0G8BA"
+}
