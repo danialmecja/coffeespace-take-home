@@ -1,0 +1,174 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "$id": "people_canonical",
+  "title": "Canonical Person Record",
+  "description": "Merged person record from multiple LinkedIn data sources. Grain: one row per real-world person.",
+  "type": "object",
+  "required": ["canonical_id", "linkedin_num_id", "identity", "provenance"],
+  "properties": {
+    "canonical_id": {
+      "type": "string",
+      "description": "Deterministic hash of linkedin_num_id (primary key)"
+    },
+    "linkedin_num_id": {
+      "type": "integer",
+      "description": "Natural key from LinkedIn, used for cross-source joins"
+    },
+    "identity": {
+      "type": "object",
+      "description": "Canonical identity fields after conflict resolution",
+      "properties": {
+        "full_name": { "type": ["string", "null"] },
+        "first_name": { "type": ["string", "null"] },
+        "last_name": { "type": ["string", "null"] },
+        "headline": { "type": ["string", "null"] },
+        "about": { "type": ["string", "null"] }
+      }
+    },
+    "identity_sources": {
+      "type": "array",
+      "description": "Per-source identity values for provenance tracking",
+      "items": {
+        "type": "object",
+        "required": ["source_system"],
+        "properties": {
+          "source_system": { "type": "string", "enum": ["source_1", "source_2"] },
+          "full_name": { "type": ["string", "null"] },
+          "headline": { "type": ["string", "null"] },
+          "about": { "type": ["string", "null"] },
+          "last_updated": { "type": "string", "format": "date-time" }
+        }
+      }
+    },
+    "location": {
+      "type": "object",
+      "description": "Hierarchical location data",
+      "properties": {
+        "display_string": { "type": ["string", "null"] },
+        "country": { "type": ["string", "null"] },
+        "region": { "type": ["string", "null"] },
+        "locality": { "type": ["string", "null"] },
+        "country_code": { "type": ["string", "null"] },
+        "location_ids": {
+          "type": "array",
+          "items": { "type": "integer" },
+          "description": "Who's On First IDs if available"
+        }
+      }
+    },
+    "social_metrics": {
+      "type": "object",
+      "description": "Time-sensitive social metrics",
+      "properties": {
+        "connections": { "type": ["integer", "null"] },
+        "followers": { "type": ["integer", "null"] },
+        "metrics_as_of": { "type": "string", "format": "date-time" }
+      }
+    },
+    "experience": {
+      "type": "array",
+      "description": "Work history, deduped by company+title+dates",
+      "items": {
+        "type": "object",
+        "properties": {
+          "experience_id": { "type": "string" },
+          "company_name": { "type": ["string", "null"] },
+          "company_linkedin_id": { "type": ["string", "null"] },
+          "title": { "type": ["string", "null"] },
+          "start_date": { "type": ["string", "null"], "format": "date" },
+          "end_date": { "type": ["string", "null"], "format": "date" },
+          "location": { "type": ["string", "null"] },
+          "description": { "type": ["string", "null"] },
+          "is_current": { "type": "boolean" },
+          "source_system": { "type": "string" }
+        }
+      }
+    },
+    "education": {
+      "type": "array",
+      "description": "Education history, deduped by institution+degree+dates",
+      "items": {
+        "type": "object",
+        "properties": {
+          "education_id": { "type": "string" },
+          "institution_name": { "type": ["string", "null"] },
+          "degree": { "type": ["string", "null"] },
+          "field_of_study": { "type": ["string", "null"] },
+          "start_date": { "type": ["string", "null"], "format": "date" },
+          "end_date": { "type": ["string", "null"], "format": "date" },
+          "source_system": { "type": "string" }
+        }
+      }
+    },
+    "certifications": {
+      "type": "array",
+      "description": "Professional certifications (Source 2 exclusive)",
+      "items": {
+        "type": "object",
+        "properties": {
+          "title": { "type": ["string", "null"] },
+          "issuing_org": { "type": ["string", "null"] },
+          "issue_date": { "type": ["string", "null"], "format": "date" },
+          "credential_id": { "type": ["string", "null"] }
+        }
+      }
+    },
+    "skills": {
+      "type": "array",
+      "items": { "type": "string" },
+      "description": "Combined skill set from all sources"
+    },
+    "computed_signals": {
+      "type": "object",
+      "description": "Aviato-computed talent signals (Source 1 exclusive)",
+      "properties": {
+        "likely_to_explore": { "type": ["boolean", "null"] },
+        "recently_left_company": { "type": ["boolean", "null"] },
+        "potential_to_leave": { "type": ["boolean", "null"] },
+        "prior_backed_founder": { "type": ["boolean", "null"] },
+        "unicorn_early_engineer": { "type": ["boolean", "null"] },
+        "big_tech_alum_private": { "type": ["boolean", "null"] },
+        "big_tech_alum_public": { "type": ["boolean", "null"] }
+      }
+    },
+    "derived_fields": {
+      "type": "object",
+      "description": "Computed during merge process",
+      "properties": {
+        "primary_portfolio": {
+          "type": ["string", "null"],
+          "enum": [null, "Software Engineering", "Data Science", "Product Management", "Design", "Operations", "Sales", "Marketing", "Finance", "Human Resources", "Executive", "Other"]
+        },
+        "years_of_experience": { "type": ["number", "null"] },
+        "computation_method": { "type": ["string", "null"] }
+      }
+    },
+    "provenance": {
+      "type": "object",
+      "description": "Full source lineage for auditing",
+      "required": ["source_systems", "first_seen_at", "last_merged_at", "record_version"],
+      "properties": {
+        "source_systems": {
+          "type": "array",
+          "items": { "type": "string", "enum": ["source_1", "source_2"] }
+        },
+        "source_1_id": { "type": ["string", "null"] },
+        "source_2_id": { "type": ["string", "null"] },
+        "source_1_last_updated": { "type": ["string", "null"], "format": "date-time" },
+        "source_2_last_updated": { "type": ["string", "null"], "format": "date-time" },
+        "first_seen_at": { "type": "string", "format": "date-time" },
+        "last_merged_at": { "type": "string", "format": "date-time" },
+        "record_version": { "type": "integer" }
+      }
+    },
+    "sync_metadata": {
+      "type": "object",
+      "description": "Change detection for incremental Firestore sync",
+      "properties": {
+        "firestore_doc_id": { "type": ["string", "null"] },
+        "last_synced_at": { "type": ["string", "null"], "format": "date-time" },
+        "sync_hash": { "type": ["string", "null"] }
+      }
+    }
+  }
+}

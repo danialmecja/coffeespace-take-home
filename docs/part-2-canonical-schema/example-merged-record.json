@@ -1,0 +1,251 @@
+{
+  "_comment": "Example showing how Source 1 + Source 2 merge into canonical record",
+
+  "source_1_input": {
+    "id": "abc123-uuid-from-source1",
+    "linkedinNumID": 123456789,
+    "linkedinID": "johndoe",
+    "fullName": "John Doe",
+    "firstName": "John",
+    "lastName": "Doe",
+    "headline": "Senior Software Engineer at Acme Corp",
+    "about": "Passionate about building scalable systems...",
+    "lastUpdated": "2025-10-24T05:37:55.731Z",
+    "linkedinConnections": 500,
+    "linkedinFollowers": 1200,
+    "location": "San Francisco Bay Area",
+    "locationDetails": {
+      "country": "United States",
+      "region": "California",
+      "locality": "San Francisco"
+    },
+    "locationIDList": [85922583, 85688637],
+    "experienceList": [
+      {
+        "companyID": "1234",
+        "companyName": "Acme Corp",
+        "title": "Senior Software Engineer",
+        "startDate": "2022-01-01T00:00:00.000Z",
+        "endDate": null,
+        "location": "San Francisco, CA"
+      },
+      {
+        "companyID": "5678",
+        "companyName": "StartupXYZ",
+        "title": "Software Engineer",
+        "startDate": "2019-06-01T00:00:00.000Z",
+        "endDate": "2021-12-31T00:00:00.000Z",
+        "location": "Palo Alto, CA"
+      }
+    ],
+    "educationList": [
+      {
+        "schoolName": "Stanford University",
+        "degree": "BS",
+        "fieldOfStudy": "Computer Science",
+        "startDate": "2015-09-01T00:00:00.000Z",
+        "endDate": "2019-05-01T00:00:00.000Z"
+      }
+    ],
+    "skills": ["Python", "Java", "Kubernetes", "AWS"],
+    "computed_likelyToExplore": false,
+    "computed_recentlyLeftCompany": false,
+    "computed_potentialToLeave": true,
+    "computed_priorBackedFounder": false,
+    "computed_unicornEarlyEngineer": true,
+    "computed_bigTechAlumPrivate": false,
+    "computed_bigTechAlumPublic": false
+  },
+
+  "source_2_input": {
+    "id": "johndoe",
+    "linkedin_id": "johndoe",
+    "linkedin_num_id": "123456789",
+    "name": "John  Doe",
+    "first_name": "John",
+    "last_name": "Doe",
+    "position": "Senior Software Engineer at Acme Corp",
+    "about": null,
+    "city": "San Francisco, California, United States",
+    "country_code": "US",
+    "connections": 512,
+    "followers": 1250,
+    "experience": [
+      {
+        "company": "Acme Corp",
+        "company_id": "acme-corp",
+        "title": "Senior Software Engineer",
+        "starts_at": "Jan 2022",
+        "ends_at": "Present",
+        "location": "San Francisco, California"
+      },
+      {
+        "company": "StartupXYZ",
+        "company_id": "startupxyz",
+        "title": "Software Engineer",
+        "starts_at": "Jun 2019",
+        "ends_at": "Dec 2021",
+        "location": "Palo Alto, California"
+      }
+    ],
+    "education": [
+      {
+        "school": "Stanford University",
+        "degree": "Bachelor of Science - BS",
+        "field": "Computer Science",
+        "starts_at": "2015",
+        "ends_at": "2019"
+      }
+    ],
+    "certifications": [
+      {
+        "title": "AWS Solutions Architect",
+        "authority": "Amazon Web Services",
+        "starts_at": "Mar 2023",
+        "credential_id": "AWS-SA-12345"
+      }
+    ],
+    "skills": ["Python", "JavaScript", "Docker", "AWS", "PostgreSQL"]
+  },
+
+  "canonical_output": {
+    "canonical_id": "sha256_123456789",
+    "linkedin_num_id": 123456789,
+
+    "identity": {
+      "full_name": "John Doe",
+      "first_name": "John",
+      "last_name": "Doe",
+      "headline": "Senior Software Engineer at Acme Corp",
+      "about": "Passionate about building scalable systems..."
+    },
+
+    "identity_sources": [
+      {
+        "source_system": "source_1",
+        "full_name": "John Doe",
+        "headline": "Senior Software Engineer at Acme Corp",
+        "about": "Passionate about building scalable systems...",
+        "last_updated": "2025-10-24T05:37:55.731Z"
+      },
+      {
+        "source_system": "source_2",
+        "full_name": "John  Doe",
+        "headline": "Senior Software Engineer at Acme Corp",
+        "about": null,
+        "last_updated": null
+      }
+    ],
+
+    "location": {
+      "display_string": "San Francisco Bay Area",
+      "country": "United States",
+      "region": "California",
+      "locality": "San Francisco",
+      "country_code": "US",
+      "location_ids": [85922583, 85688637]
+    },
+
+    "social_metrics": {
+      "connections": 512,
+      "followers": 1250,
+      "metrics_as_of": "2025-10-24T05:37:55.731Z"
+    },
+
+    "experience": [
+      {
+        "experience_id": "exp_1234_senior-software-engineer_2022-01-01",
+        "company_name": "Acme Corp",
+        "company_linkedin_id": "1234",
+        "title": "Senior Software Engineer",
+        "start_date": "2022-01-01",
+        "end_date": null,
+        "location": "San Francisco, CA",
+        "description": null,
+        "is_current": true,
+        "source_system": "source_1"
+      },
+      {
+        "experience_id": "exp_5678_software-engineer_2019-06-01",
+        "company_name": "StartupXYZ",
+        "company_linkedin_id": "5678",
+        "title": "Software Engineer",
+        "start_date": "2019-06-01",
+        "end_date": "2021-12-31",
+        "location": "Palo Alto, CA",
+        "description": null,
+        "is_current": false,
+        "source_system": "source_1"
+      }
+    ],
+
+    "education": [
+      {
+        "education_id": "edu_stanford_bs_computer-science",
+        "institution_name": "Stanford University",
+        "degree": "BS",
+        "field_of_study": "Computer Science",
+        "start_date": "2015-09-01",
+        "end_date": "2019-05-01",
+        "source_system": "source_1"
+      }
+    ],
+
+    "certifications": [
+      {
+        "title": "AWS Solutions Architect",
+        "issuing_org": "Amazon Web Services",
+        "issue_date": "2023-03-01",
+        "credential_id": "AWS-SA-12345"
+      }
+    ],
+
+    "skills": ["Python", "Java", "JavaScript", "Kubernetes", "Docker", "AWS", "PostgreSQL"],
+
+    "computed_signals": {
+      "likely_to_explore": false,
+      "recently_left_company": false,
+      "potential_to_leave": true,
+      "prior_backed_founder": false,
+      "unicorn_early_engineer": true,
+      "big_tech_alum_private": false,
+      "big_tech_alum_public": false
+    },
+
+    "derived_fields": {
+      "primary_portfolio": "Software Engineering",
+      "years_of_experience": 5.5,
+      "computation_method": "v1: sum non-overlapping periods, categorize by title keywords"
+    },
+
+    "provenance": {
+      "source_systems": ["source_1", "source_2"],
+      "source_1_id": "abc123-uuid-from-source1",
+      "source_2_id": "johndoe",
+      "source_1_last_updated": "2025-10-24T05:37:55.731Z",
+      "source_2_last_updated": null,
+      "first_seen_at": "2025-10-24T05:37:55.731Z",
+      "last_merged_at": "2026-02-05T12:00:00.000Z",
+      "record_version": 1
+    },
+
+    "sync_metadata": {
+      "firestore_doc_id": "123456789",
+      "last_synced_at": null,
+      "sync_hash": "a1b2c3d4e5f6..."
+    }
+  },
+
+  "merge_decisions": {
+    "identity.full_name": "Source 1 preferred (99.6% completeness vs 99.2%). Note: Source 2 had double space in name.",
+    "identity.about": "Source 1 preferred (84.5% vs 40.5% completeness). Source 2 was null.",
+    "social_metrics": "Source 2 values used (assuming more recent scrape). Both sources had data.",
+    "experience": "Deduped by company+title+dates. Source 1 preferred for matching records (better date format).",
+    "education": "Deduped. Source 1 preferred (ISO dates vs '2015' string).",
+    "certifications": "Source 2 only (Source 1 doesn't capture this).",
+    "skills": "Union of both sources, deduplicated.",
+    "computed_signals": "Source 1 only (exclusive to Aviato enrichment).",
+    "derived_fields.primary_portfolio": "Computed from experience titles. 'Senior Software Engineer' -> Software Engineering.",
+    "derived_fields.years_of_experience": "2019-06 to 2021-12 (2.5y) + 2022-01 to now (3y) = 5.5 years."
+  }
+}

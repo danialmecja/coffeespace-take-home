@@ -1,5 +1,26 @@
 # CLAUDE.md
 
+## Project-Specific: CoffeeSpace Take-Home
+
+### Environment
+- **Python**: Use `uv run` for all Python commands
+- **Virtual env**: `coffeespace-task` (managed by uv)
+- **Decision log**: Update `docs/decisions/decision-log.md` after completing each part
+
+### Data Sources
+- **Source 1**: Aviato-style enriched data (11GB JSONL in GCS)
+- **Source 2**: LinkedIn scraper data (863 JSON files in GCS)
+- **Join key**: `linkedin_num_id` (INT64) - present in both sources
+
+### Schema Patterns
+- Use `snake_case` for canonical schema (matches BigQuery conventions)
+- Store provenance in arrays (e.g., `identity_sources`) to never silently lose data
+- Include `sync_hash` for Firestore delta detection
+
+---
+
+# Behavioral Guidelines
+
 Behavioral guidelines to reduce common LLM coding mistakes. Merge with project-specific instructions as needed.
 
 **Tradeoff:** These guidelines bias toward caution over speed. For trivial tasks, use judgment.

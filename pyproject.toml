@@ -1,0 +1,15 @@
+[project]
+name = "coffeespace-take-home"
+version = "0.1.0"
+description = "coffee-space DE take-home"
+readme = "README.md"
+requires-python = ">=3.13"
+dependencies = [
+    "ipykernel>=7.1.0",
+    "numpy>=2.4.2",
+    "pandas>=3.0.0",
+    "google-cloud-bigquery>=3.0.0",
+    "google-cloud-firestore>=2.0.0",
+    "google-cloud-storage>=2.0.0",
+    "db-dtypes>=1.0.0",
+]
