@@ -2,7 +2,9 @@
   "permissions": {
     "allow": [
       "WebSearch",
-      "WebFetch(domain:medium.com)"
+      "WebFetch(domain:medium.com)",
+      "Bash(bq query:*)",
+      "Bash(uv run python:*)"
     ]
   }
 }

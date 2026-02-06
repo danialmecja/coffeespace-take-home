@@ -1,14 +1,35 @@
 -- Step 4: Staging Source 2 (Silver Layer)
 -- Normalizes to canonical schema with cleaning and error tracking
 -- Join key: linkedin_id (URL slug, matches Source 1's linkedinID)
+--
+-- NOTE: Source 2 is loaded as raw JSON strings (single json_line column)
+-- because autodetect fails on dirty data (e.g., end_year = "2022-05" vs 2022)
+-- This approach parses fields safely using JSON_VALUE/JSON_QUERY_ARRAY.
 
 CREATE OR REPLACE TABLE `coffeespace-sandbox.coffeespace_canonical.stg_source_2` AS
 
 WITH parsed AS (
   SELECT
-    *,
+    json_line,
+    -- Extract scalar fields
+    JSON_VALUE(json_line, '$.linkedin_id') AS linkedin_id,
+    JSON_VALUE(json_line, '$.id') AS id,
+    JSON_VALUE(json_line, '$.name') AS name,
+    JSON_VALUE(json_line, '$.first_name') AS first_name,
+    JSON_VALUE(json_line, '$.last_name') AS last_name,
+    JSON_VALUE(json_line, '$.position') AS position,
+    JSON_VALUE(json_line, '$.about') AS about,
+    JSON_VALUE(json_line, '$.location') AS location,
+    JSON_VALUE(json_line, '$.city') AS city,
+    JSON_VALUE(json_line, '$.country_code') AS country_code,
+    SAFE_CAST(JSON_VALUE(json_line, '$.connections') AS INT64) AS connections,
+    SAFE_CAST(JSON_VALUE(json_line, '$.followers') AS INT64) AS followers,
+    -- Arrays (kept as JSON for further parsing)
+    JSON_QUERY(json_line, '$.experience') AS experience_json,
+    JSON_QUERY(json_line, '$.education') AS education_json,
+    JSON_QUERY(json_line, '$.certifications') AS certifications_json,
     ARRAY<STRUCT<field STRING, error STRING, raw_value STRING>>[] AS _errors
-  FROM `coffeespace-sandbox.coffeespace_canonical.raw_source_2`
+  FROM `coffeespace-sandbox.coffeespace_canonical.raw_source_2_sample50`
 ),
 
 with_errors AS (
@@ -16,11 +37,11 @@ with_errors AS (
     p.*,
     ARRAY_CONCAT(
       p._errors,
-      IF(linkedin_id IS NULL,
+      IF(p.linkedin_id IS NULL,
          [STRUCT('linkedin_id' AS field, 'NULL_VALUE' AS error, '' AS raw_value)],
          []),
-      IF(REGEXP_CONTAINS(name, r'\s{2,}'),
-         [STRUCT('full_name' AS field, 'EXTRA_WHITESPACE' AS error, name AS raw_value)],
+      IF(REGEXP_CONTAINS(p.name, r'\s{2,}'),
+         [STRUCT('full_name' AS field, 'EXTRA_WHITESPACE' AS error, p.name AS raw_value)],
          [])
     ) AS normalization_errors
   FROM parsed p
@@ -65,54 +86,52 @@ SELECT
     CURRENT_TIMESTAMP() AS metrics_as_of
   ) AS social_metrics,
 
-  -- Experience array
+  -- Experience array (parse from JSON)
   ARRAY(
     SELECT AS STRUCT
       TO_HEX(MD5(CONCAT(
-        COALESCE(exp.company_id, COALESCE(exp.company, '')),
-        COALESCE(exp.title, ''),
-        COALESCE(exp.start_date, '')
+        COALESCE(JSON_VALUE(exp, '$.company_id'), COALESCE(JSON_VALUE(exp, '$.company'), '')),
+        COALESCE(JSON_VALUE(exp, '$.title'), ''),
+        COALESCE(JSON_VALUE(exp, '$.start_date'), '')
       ))) AS experience_id,
-      exp.company AS company_name,
-      exp.company_id AS company_linkedin_id,
-      exp.title,
-      SAFE.PARSE_DATE('%b %Y', exp.start_date) AS start_date,
-      IF(exp.end_date = 'Present', NULL, SAFE.PARSE_DATE('%b %Y', exp.end_date)) AS end_date,
-      exp.location,
-      exp.description,
-      (exp.end_date IS NULL OR exp.end_date = 'Present') AS is_current,
+      JSON_VALUE(exp, '$.company') AS company_name,
+      JSON_VALUE(exp, '$.company_id') AS company_linkedin_id,
+      JSON_VALUE(exp, '$.title') AS title,
+      SAFE.PARSE_DATE('%b %Y', JSON_VALUE(exp, '$.start_date')) AS start_date,
+      IF(JSON_VALUE(exp, '$.end_date') = 'Present', NULL,
+         SAFE.PARSE_DATE('%b %Y', JSON_VALUE(exp, '$.end_date'))) AS end_date,
+      JSON_VALUE(exp, '$.location') AS location,
+      JSON_VALUE(exp, '$.description') AS description,
+      (JSON_VALUE(exp, '$.end_date') IS NULL OR JSON_VALUE(exp, '$.end_date') = 'Present') AS is_current,
       'source_2' AS source_system
-    FROM UNNEST(experience) AS exp
-    WHERE exp IS NOT NULL
+    FROM UNNEST(JSON_QUERY_ARRAY(experience_json)) AS exp
   ) AS experience,
 
-  -- Education array
+  -- Education array (parse from JSON)
   ARRAY(
     SELECT AS STRUCT
       TO_HEX(MD5(CONCAT(
-        COALESCE(edu.title, ''),
-        COALESCE(edu.degree, ''),
+        COALESCE(JSON_VALUE(edu, '$.title'), ''),
+        COALESCE(JSON_VALUE(edu, '$.degree'), ''),
         ''
       ))) AS education_id,
-      edu.title AS institution_name,
-      edu.degree,
-      edu.field AS field_of_study,
+      JSON_VALUE(edu, '$.title') AS institution_name,
+      JSON_VALUE(edu, '$.degree') AS degree,
+      JSON_VALUE(edu, '$.field') AS field_of_study,
       CAST(NULL AS DATE) AS start_date,
       CAST(NULL AS DATE) AS end_date,
       'source_2' AS source_system
-    FROM UNNEST(education) AS edu
-    WHERE edu IS NOT NULL
+    FROM UNNEST(JSON_QUERY_ARRAY(education_json)) AS edu
   ) AS education,
 
-  -- Certifications (Source 2 exclusive)
+  -- Certifications (Source 2 exclusive, parse from JSON)
   ARRAY(
     SELECT AS STRUCT
-      cert.title,
-      cert.subtitle AS issuing_org,
+      JSON_VALUE(cert, '$.title') AS title,
+      JSON_VALUE(cert, '$.subtitle') AS issuing_org,
       CAST(NULL AS DATE) AS issue_date,
-      cert.credential_id
-    FROM UNNEST(certifications) AS cert
-    WHERE cert IS NOT NULL
+      JSON_VALUE(cert, '$.credential_id') AS credential_id
+    FROM UNNEST(JSON_QUERY_ARRAY(certifications_json)) AS cert
   ) AS certifications,
 
   -- Skills (not in Source 2 sample, leave empty)

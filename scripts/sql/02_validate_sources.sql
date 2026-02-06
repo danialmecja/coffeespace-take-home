@@ -12,12 +12,12 @@ SELECT
   COUNTIF(experienceList IS NULL) AS missing_experience
 FROM `coffeespace-sandbox.coffeespace_canonical.raw_source_1`;
 
--- Source 2: Validate critical fields and type consistency
+-- Source 2: Validate critical fields (parse from json_line column)
 -- Note: Join key is linkedin_id (matches Source 1's linkedinID)
 SELECT
   'source_2' AS source,
   COUNT(*) AS total_rows,
-  COUNTIF(linkedin_id IS NULL) AS missing_linkedin_id,
-  COUNTIF(name IS NULL) AS missing_name,
-  COUNTIF(experience IS NULL) AS missing_experience
-FROM `coffeespace-sandbox.coffeespace_canonical.raw_source_2`;
+  COUNTIF(JSON_VALUE(json_line, '$.linkedin_id') IS NULL) AS missing_linkedin_id,
+  COUNTIF(JSON_VALUE(json_line, '$.name') IS NULL) AS missing_name,
+  COUNTIF(JSON_QUERY(json_line, '$.experience') IS NULL) AS missing_experience
+FROM `coffeespace-sandbox.coffeespace_canonical.raw_source_2_sample50`;

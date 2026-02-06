@@ -1,6 +1,8 @@
 -- Step 3: Staging Source 1 (Silver Layer)
 -- Normalizes to canonical schema with error tracking
 -- Join key: linkedinID (URL slug like "john-doe-123")
+--
+-- NOTE: lastUpdated is already a TIMESTAMP (BigQuery autodetected it)
 
 CREATE OR REPLACE TABLE `coffeespace-sandbox.coffeespace_canonical.stg_source_1` AS
 
@@ -19,8 +21,8 @@ with_errors AS (
       IF(linkedinID IS NULL,
          [STRUCT('linkedin_id' AS field, 'NULL_VALUE' AS error, '' AS raw_value)],
          []),
-      IF(SAFE.PARSE_TIMESTAMP('%Y-%m-%dT%H:%M:%E*SZ', lastUpdated) IS NULL AND lastUpdated IS NOT NULL,
-         [STRUCT('last_updated' AS field, 'INVALID_TIMESTAMP' AS error, lastUpdated AS raw_value)],
+      IF(lastUpdated IS NULL,
+         [STRUCT('last_updated' AS field, 'NULL_VALUE' AS error, '' AS raw_value)],
          [])
     ) AS normalization_errors
   FROM parsed p
@@ -45,7 +47,7 @@ SELECT
     fullName AS full_name,
     headline,
     about,
-    SAFE.PARSE_TIMESTAMP('%Y-%m-%dT%H:%M:%E*SZ', lastUpdated) AS last_updated
+    lastUpdated AS last_updated  -- Already TIMESTAMP
   )] AS identity_sources,
 
   -- Location (canonical struct with hierarchy)
@@ -62,22 +64,23 @@ SELECT
   STRUCT(
     linkedinConnections AS connections,
     linkedinFollowers AS followers,
-    SAFE.PARSE_TIMESTAMP('%Y-%m-%dT%H:%M:%E*SZ', lastUpdated) AS metrics_as_of
+    lastUpdated AS metrics_as_of  -- Already TIMESTAMP
   ) AS social_metrics,
 
   -- Experience array with deterministic IDs
+  -- Note: startDate/endDate may be TIMESTAMP (autodetected), cast to STRING for hashing
   ARRAY(
     SELECT AS STRUCT
       TO_HEX(MD5(CONCAT(
         COALESCE(exp.companyID, ''),
         COALESCE(pos.title, ''),
-        COALESCE(pos.startDate, '')
+        COALESCE(CAST(pos.startDate AS STRING), '')
       ))) AS experience_id,
       exp.companyName AS company_name,
       exp.companyID AS company_linkedin_id,
       pos.title AS title,
-      SAFE.PARSE_DATE('%Y-%m-%d', SUBSTR(pos.startDate, 1, 10)) AS start_date,
-      SAFE.PARSE_DATE('%Y-%m-%d', SUBSTR(pos.endDate, 1, 10)) AS end_date,
+      SAFE_CAST(pos.startDate AS DATE) AS start_date,
+      SAFE_CAST(pos.endDate AS DATE) AS end_date,
       pos.location AS location,
       pos.description AS description,
       (pos.endDate IS NULL) AS is_current,
@@ -87,18 +90,19 @@ SELECT
   ) AS experience,
 
   -- Education array with deterministic IDs
+  -- Note: Source 1 uses 'name' (not schoolName), 'subject' (not fieldOfStudy), no 'degree' field
   ARRAY(
     SELECT AS STRUCT
       TO_HEX(MD5(CONCAT(
-        COALESCE(edu.schoolName, ''),
-        COALESCE(edu.degree, ''),
-        COALESCE(edu.startDate, '')
+        COALESCE(edu.name, ''),
+        COALESCE(edu.subject, ''),
+        COALESCE(CAST(edu.startDate AS STRING), '')
       ))) AS education_id,
-      edu.schoolName AS institution_name,
-      edu.degree,
-      edu.fieldOfStudy AS field_of_study,
-      SAFE.PARSE_DATE('%Y-%m-%d', SUBSTR(edu.startDate, 1, 10)) AS start_date,
-      SAFE.PARSE_DATE('%Y-%m-%d', SUBSTR(edu.endDate, 1, 10)) AS end_date,
+      edu.name AS institution_name,
+      CAST(NULL AS STRING) AS degree,  -- Not in Source 1
+      edu.subject AS field_of_study,
+      SAFE_CAST(edu.startDate AS DATE) AS start_date,
+      SAFE_CAST(edu.endDate AS DATE) AS end_date,
       'source_1' AS source_system
     FROM UNNEST(educationList) AS edu
   ) AS education,
@@ -123,7 +127,7 @@ SELECT
   -- Provenance
   id AS source_id,
   'source_1' AS source_system,
-  SAFE.PARSE_TIMESTAMP('%Y-%m-%dT%H:%M:%E*SZ', lastUpdated) AS last_updated,
+  lastUpdated AS last_updated,  -- Already TIMESTAMP
 
   -- Error tracking
   normalization_errors

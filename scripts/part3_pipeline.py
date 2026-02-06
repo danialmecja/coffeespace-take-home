@@ -74,10 +74,10 @@ def run_sql_file(client: bigquery.Client, sql_file: Path, description: str) -> d
 
 def check_source_2_loaded(bq_client: bigquery.Client) -> dict:
     """
-    Verify Source 2 was loaded via load_source_2.sh.
+    Verify Source 2 was loaded as raw JSON strings.
 
-    Source 2 files are JSON arrays [...], not JSONL, so they must be
-    loaded via the bash script (which runs from Cloud Shell).
+    Source 2 is loaded as a single json_line column (STRING) to avoid
+    autodetect issues with dirty data. Loaded via Cloud Shell bq load.
     """
     print(f"\n{'='*60}")
     print("Step: Verify Source 2 Loaded")
@@ -86,24 +86,25 @@ def check_source_2_loaded(bq_client: bigquery.Client) -> dict:
     results = {"success": True, "errors": [], "row_count": 0}
 
     try:
-        table_id = f"{PROJECT_ID}.{DATASET_ID}.raw_source_2"
+        # Using sample50 table for now (50 files loaded)
+        table_id = f"{PROJECT_ID}.{DATASET_ID}.raw_source_2_sample50"
         query = f"SELECT COUNT(*) as cnt FROM `{table_id}`"
         result = list(bq_client.query(query).result())
         row_count = result[0].cnt if result else 0
 
         if row_count == 0:
-            print("  ERROR: raw_source_2 table is empty or doesn't exist!")
-            print("  Run scripts/load_source_2.sh from Cloud Shell first.")
+            print("  ERROR: raw_source_2_sample50 table is empty or doesn't exist!")
+            print("  Load Source 2 via Cloud Shell first (see README).")
             results["success"] = False
         else:
             results["row_count"] = row_count
-            print(f"  OK: raw_source_2 has {row_count:,} rows")
+            print(f"  OK: raw_source_2_sample50 has {row_count:,} rows")
 
     except Exception as e:
         results["success"] = False
         results["errors"].append(str(e))
         print(f"  ERROR: {e}")
-        print("  Run scripts/load_source_2.sh from Cloud Shell first.")
+        print("  Load Source 2 via Cloud Shell first (see README).")
 
     return results
 
@@ -116,7 +117,7 @@ def verify_table_counts(client: bigquery.Client):
 
     tables = [
         "raw_source_1",
-        "raw_source_2",
+        "raw_source_2_sample50",  # Loaded as raw JSON strings
         "stg_source_1",
         "stg_source_2",
         "people_canonical",
